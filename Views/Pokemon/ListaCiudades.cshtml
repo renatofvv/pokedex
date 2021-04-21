@@ -1,0 +1,16 @@
+@model List<Pokemon>
+
+<h1>Lista de Ciudades registradas en la Pokedex</h1>
+
+@if (Model.Count == 0) {
+    <div class="alert alert-warning text-center">Aún no hay Ciudades registradas.</div>
+} else {
+    <ol>
+    @foreach (var r in Model) {
+        <li class="d-flex">
+            <div><img src="@r.Maestro" /></div>
+            <div>@r.Lugar</div>
+        </li>
+    }
+    </ol>
+}
